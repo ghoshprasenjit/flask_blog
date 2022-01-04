@@ -1,0 +1,157 @@
+.home-page{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-head{
+    color: rgb(3, 1, 32);
+    height: 8vh;
+    background: rgb(235, 231, 231);
+    width: 80%;
+    /* margin: 5px; */
+    padding: 20px;
+    /* border: 1px solid gray; */
+}
+
+.home-post{
+    color: rgb(3, 1, 32);
+    background: rgb(235, 231, 231);
+    width: 80%;
+    margin: 2px;
+    padding: 20px;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+}
+.home-post:hover{
+    background: rgb(193, 218, 250);
+}
+
+.home-post h2{
+    padding: 5px;
+}
+
+.home-post p{
+    padding: 3px;
+}
+
+/* >>>>>>>>>>>>>>> Registr Page <<<<<<<<<<<<< */
+
+.register-page{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-header{
+    color: red;
+    height: 8vh;
+    background: rgb(181, 245, 159);
+    width: 80%;
+    padding: 20px;
+}
+
+.register-form{
+    color: rgb(3, 1, 32);
+    background: rgb(235, 231, 231);
+    width: 80%;
+    height: 76vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-field-geoup{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.register-field-geoup label{
+    padding: 10px;
+    margin: 2px;
+}
+
+.register-field-geoup input{
+    padding: 10px;
+    width: 20vw;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.from-error{
+    background-color: rgba(250, 216, 210, 0.932);
+}
+.form-error-mesage{
+    color: red;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+
+.form-submit{
+    /* background: rgba(120, 236, 104, 0.897); */
+    margin-top: auto;;
+}
+
+.form-submit input{
+    background-color: rgb(109, 223, 175);
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 35px;
+    width: 10vw;
+}
+
+/* Delete Module */
+.pg-model{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.pg-model-content{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.delete-raper{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.delete-option{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.cancel-delete{
+    background-color: rgb(96, 196, 226);
+    color: white;
+    font-weight: 600;
+}
+.delete-btn{
+    background-color: rgb(255, 172, 158);
+    color: white;
+    font-weight: 600;
+}
+/* Delete Module */

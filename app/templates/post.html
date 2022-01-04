@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block cssadd %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'homefile.css')}}">
+{% endblock %}
+{% block content %}
+    <div class="home-page">
+        <div class="home-head">
+            <h2>{{ post.author.username }}'s Post</h2>
+        </div>
+        <div class="home-post">
+            <h2>{{post.title}}</h2>
+            <p>Post By {{ post.author.username }}, On {{ post.date_posted.strftime('%d-%m-%Y') }}</p>
+            <p>{{ post.content }}</p>
+            {% if post.author == current_user%}
+                <div class="add-btn">
+                <button class="delete-option cancel-delete"><a href="{{ url_for('posts.update_post', post_id = post.id) }}">Update</a></button>
+                <button class="pg-model-open delete-option delete-btn">Delete</button>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="pg-model">
+        <div class="pg-model-content">
+            <h4>Do You Want To Delete The Post?</h4>
+            <div class="delete-raper">
+                <button class="pg-model-close delete-option cancel-delete">Cancel</button>
+                <form action="{{ url_for('posts.delete_post', post_id = post.id) }}" method="POST">
+                    <input class="delete-btn delete-option" type="submit" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //PG Model Open
+        document.querySelector('.pg-model-open').addEventListener('click', function(){
+            document.querySelector('.pg-model').style.display = 'flex'
+        })
+
+         //PG Model Close
+         document.querySelector('.pg-model-close').addEventListener('click', function(){
+            document.querySelector('.pg-model').style.display = 'none'
+        })
+    </script>
+{% endblock %}

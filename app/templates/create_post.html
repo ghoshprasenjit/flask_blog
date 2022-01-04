@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block cssadd %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'homefile.css')}}">
+{% endblock %}
+{% block content %}
+    <div class="register-page">
+        <div class="register-header">
+            <h3>{{ title }}</h3>
+        </div>
+        <form class="register-form" method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="register-field-geoup register-title">
+                {{ form.title.label() }}
+                {% if form.title.errors %}
+                    {{ form.title(class = "from-error") }}
+                    {% for error in form.title.errors %}
+                        <span class="form-error-mesage">{{ error }}</span>
+                    {% endfor %}
+                {% else %}
+                    {{ form.title() }} 
+                {% endif %}
+                  
+            </div>
+            <div class="register-field-geoup register-content">
+                {{ form.content.label() }}
+                {% if form.content.errors %}
+                    {{ form.content(class = "from-error") }}
+                    {% for error in form.content.errors %}
+                        <span class="form-error-mesage">{{ error }}</span>
+                    {% endfor %}
+                {% else %}
+                    {{ form.content() }}
+                {% endif %}   
+            </div>
+            
+            <div class="register-field-geoup form-submit">
+                {{ form.submit() }}   
+            </div>
+        </form>
+        
+    </div>
+    
+{% endblock %}
