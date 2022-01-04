@@ -11,7 +11,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 
 # db = SQLAlchemy()
-# bcrypt = Bcrypt()
+# bcrypt = Bcrypt()##NA
 # login_manager = LoginManager()
 
 login_manager.login_view = "users.login" ## Rout name For Redirecting user to login page
